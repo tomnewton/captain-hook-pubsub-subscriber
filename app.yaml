@@ -1,4 +1,5 @@
-runtime: ruby25
+runtime: ruby
+env: flex
 entrypoint: bundle exec ruby app.rb
 instance_class: B2
 
