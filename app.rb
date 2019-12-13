@@ -19,7 +19,7 @@ class App < Sinatra::Base
         sub = pubsub.subscription "webhook-subscription"
         while true do
             logger.info 'awake...'
-            received_messages = sub.pull max: 5
+            received_messages = sub.pull max: 50
             logger.info "pulled #{received_messages.length} messages"
             sub.acknowledge received_messages
             logger.info "ack'd"
